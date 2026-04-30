@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Achievements</title>
+<link rel="stylesheet" href="css/style.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+  <h2 class="logo">Gayathri</h2>
+  <ul>
+    <li><a href="home.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="achievements.html">Achievements</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="achievements-container" data-aos="fade-up">
+<h1>My Achievements</h1>
+
+<div class="achievements-grid">
+
+      <!-- Achievement 1 -->
+    <div class="achievement-card">
+<img src="images/conference1.jpg" onclick="openImage(this.src)">
+      <h3>Conference</h3>
+      <p>Participated in national level conference</p>
+    </div>
+
+
+    <!-- Achievement 2 -->
+    <div class="achievement-card">
+     <img src="images/internship.png" onclick="openImage(this.src)">
+      <h3>Internship</h3>
+      <p> Completed an Internship in Full Stack Development at RepuNEXT, Velachery</p>
+    </div>
+
+    <!-- Achievement 3 -->
+    <div class="achievement-card">
+<img src="images/paper presentation.jpeg" onclick="openImage(this.src)">
+      <h3>Paper presentation</h3>
+      <p>Presented innovative project</p>
+    </div>
+
+    <!-- Achievement 4 -->
+    <div class="achievement-card">
+  <img src="images/cert1.jpg" onclick="openImage(this.src)">
+      <h3>Symposium</h3>
+      <p> Secured Second Prize in “Crypts of Secret” </p>
+    </div>
+
+    <div class="achievement-card">
+  <img src="images/cert2.jpg" onclick="openImage(this.src)">
+      <h3>A National level Sympo</h3>
+      <p> Secured Third Prize in “Innovation and Spark Search” </p>
+    </div>
+
+     <div class="achievement-card">
+   <img src="images/typewriting.jpg" onclick="openImage(this.src)">
+      <h3>Type-writing</h3>
+      <p> Achieved Distinction in Typewriting (Junior and Higher– English) </p>
+    </div>
+
+
+
+</div>
+
+</section>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script>
+function openImage(src) {
+  document.getElementById("imagePopup").style.display = "block";
+  document.getElementById("popupImg").src = src;
+}
+
+function closeImage() {
+  document.getElementById("imagePopup").style.display = "none";
+}
+window.onclick = function(event) {
+  let popup = document.getElementById("imagePopup");
+  if (event.target === popup) {
+    popup.style.display = "none";
+  }
+}
+</script>
+<div id="imagePopup" class="popup">
+  <span class="close" onclick="closeImage()">&times;</span>
+  <img class="popup-img" id="popupImg">
+</div>
+</body>
+</html>
